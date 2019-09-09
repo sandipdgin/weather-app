@@ -5,6 +5,7 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 // console.log('dir = ', __dirname)
 // console.log('file = ', __filename)
@@ -60,7 +61,6 @@ app.get('/weather', (req, res) => {
         })
     })
 
-
     // res.send({
     //     forcast: 'forcast',
     //     location: req.query.address,
@@ -76,6 +76,7 @@ app.get('*', (req, res) => {
     })
 })
 
+
 // app.get('/help', (req, res) => {
 //     res.send({
 //         name: 'sandip',
@@ -87,6 +88,6 @@ app.get('*', (req, res) => {
 //     res.send('About page')
 // })
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+app.listen(port, () => {
+    console.log('Server is up on port' + port)
 });
