@@ -1,0 +1,23 @@
+{
+    "name": "web-server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/server.js",
+    "scripts": {
+        "build-css": "node-sass --include-path scss public/assets/scss/style.scss public/assets/css/style00.css",
+        "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "hbs": "^4.0.4",
+        "request": "^2.88.0"
+    },
+    "devDependencies": {
+        "node-sass": "^4.12.0",
+        "nodemon": "^1.19.2"
+    }
+}
